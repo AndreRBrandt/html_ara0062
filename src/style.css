@@ -6,6 +6,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #ECF0F1;
@@ -73,6 +77,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+.button {
+    margin: 20px;
+    width: 180px;
+    height: 40px;
+    background-color: #D35400;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.grupo__form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
 }
 form {
     max-width: 600px;
@@ -134,10 +156,16 @@ button[type="submit"] {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-
+}
 
 /* Layout para telas maiores */
 @media(min-width: 768px) {
+    .grupo__form {
+        width: 40%;
+    }
+    .main {
+        max-width: 80vw;
+    }
     .header {
         display: flex;
         align-items: center;
