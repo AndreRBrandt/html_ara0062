@@ -68,7 +68,7 @@ body {
 
 .main {
     padding: 20px;
-    margin: 40px 20px;
+    margin: 40px 10px;
     background-color: #fff;
     border-radius: 8px;
     transition: background-color 0.3s ease-in-out;
@@ -215,14 +215,20 @@ button[type="submit"]:focus {
     box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
 }
 .form-grup {
-    width: 70%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 /* Layout para telas maiores */
 @media(min-width: 768px) {
+    .main {
+        margin: 40px 20px;
+    }
     .form-grup {
+        flex-direction: row;
+        justify-content: space-between;
         width: 40%;
     }
     .header {
