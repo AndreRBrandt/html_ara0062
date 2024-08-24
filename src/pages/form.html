@@ -1,116 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deixe sua Opinião</title>
+    <title>Deixe sua opinião - André Brandt</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    <header class="header">
-        <h1 class="header__title">Deixe sua Opinião</h1>
-    </header>
-
-    <main class="main__form">
-        <form action="#" method="post">
-            <!-- Nome Completo -->
+    <main class="main">
+        <h1 class="main__title">Deixe sua opinião</h1>
+        <form action="#" method="post" class="form-container">
             <div>
-                <label for="nome-completo">Nome Completo:</label>
-                <input type="text" id="nome-completo" name="nome-completo" required>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
             </div>
-
-            <!-- Telefone -->
             <div>
                 <label for="telefone">Telefone:</label>
                 <input type="tel" id="telefone" name="telefone" required>
             </div>
-
-            <!-- Email -->
             <div>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
 
-            <!-- Avaliação da Qualidade -->
             <fieldset>
-                <legend>Avaliação da Qualidade:</legend>
-                
-                <div class="grupo__form">
+                <legend>Qualidade:</legend>
+                <div class="form-grup">
                     <label for="excelente">Excelente</label>
                     <input type="radio" id="excelente" name="qualidade" value="excelente" required>
                 </div>
-
-                <div class="grupo__form">
+                <div class="form-grup">
                     <label for="bom">Bom</label>
-                    <input type="radio" id="bom" name="qualidade" value="bom" required>
+                    <input type="radio" id="bom" name="qualidade" value="bom">
                 </div>
-
-                <div class="grupo__form">
+                <div class="form-grup">
                     <label for="regular">Regular</label>
-                    <input type="radio" id="regular" name="qualidade" value="regular" required>
-                    
+                    <input type="radio" id="regular" name="qualidade" value="regular">
                 </div>
-
-                <div class="grupo__form">
+                <div class="form-grup">
                     <label for="ruim">Ruim</label>
-                    <input type="radio" id="ruim" name="qualidade" value="ruim" required>
-                    
+                    <input type="radio" id="ruim" name="qualidade" value="ruim">
                 </div>
-
-                <div class="grupo__form">
-                    <label for="péssimo">Péssimo</label>
-                    <input type="radio" id="péssimo" name="qualidade" value="péssimo" required>
-                    
+                <div class="form-grup">
+                    <label for="pessimo">Péssimo</label>
+                    <input type="radio" id="pessimo" name="qualidade" value="pessimo">
                 </div>
             </fieldset>
 
-            <!-- Partes que Podem Melhorar -->
             <fieldset>
-                <legend>Partes que Podem Melhorar:</legend>
-
-                <div class="grupo__form">
+                <legend>Quais partes podem melhorar?</legend>
+                <div class="form-grup">
                     <label for="visual">Visual</label>
-                    <input type="checkbox" id="visual" name="melhorias" value="visual">
-                    
+                    <input type="checkbox" id="visual" name="melhorias[]" value="visual">
                 </div>
-
-                <div class="grupo__form">
+                <div class="form-grup">
                     <label for="responsividade">Responsividade</label>
-                    <input type="checkbox" id="responsividade" name="melhorias" value="responsividade">
-                    
+                    <input type="checkbox" id="responsividade" name="melhorias[]" value="responsividade">
                 </div>
-
-                <div class="grupo__form">
+                <div class="form-grup">
                     <label for="texto">Texto</label>
-                    <input type="checkbox" id="texto" name="melhorias" value="texto">
-                    
+                    <input type="checkbox" id="texto" name="melhorias[]" value="texto">
                 </div>
-
-                <div class="grupo__form">
+                <div class="form-grup">
                     <label for="cores">Cores</label>
-                    <input type="checkbox" id="cores" name="melhorias" value="cores">
-                    
-                </div>
-
-                <div class="grupo__form">
-                    <label for="diagramacao">Diagramação</label>
-                    <input type="checkbox" id="diagramacao" name="melhorias" value="diagramacao">
-                    
+                    <input type="checkbox" id="cores" name="melhorias[]" value="cores">
                 </div>
             </fieldset>
 
-            <!-- Comentários -->
             <div>
                 <label for="comentarios">Comentários:</label>
-                <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Deixe seus comentários aqui..."></textarea>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
             </div>
 
-            <!-- Submit -->
-            <div>
-                <button type="submit">Enviar Opinião</button>
-            </div>
+            <button type="submit">Enviar</button>
         </form>
-        <a class="button" href="../../index.html">Voltar</a>
     </main>
+    <a href="../../index.html">Voltar</a>
 </body>
+
 </html>

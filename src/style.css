@@ -6,10 +6,6 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #ECF0F1;
@@ -19,10 +15,8 @@ body {
 
 /* Estilos mobile first */
 .header {
-
     text-align: center;
     margin-bottom: 60px;
-    
 }
 
 .header__foto {
@@ -33,6 +27,7 @@ body {
     display: inline-block;
     padding: 10px;
     position: relative;
+    transition: transform 0.3s ease-in-out;
 }
 
 .header__foto::before {
@@ -45,11 +40,25 @@ body {
     top: -10px;
     left: -10px;
     z-index: -1;
+    transition: background 0.3s ease-in-out;
+}
+
+.header__foto:hover {
+    transform: scale(1.1);
+}
+
+.header__foto:hover::before {
+    background: #7F8C8D;
 }
 
 .header__title {
     font-size: 24px;
     margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header__title:hover {
+    color: #D35400;
 }
 
 .header__subtitle {
@@ -59,8 +68,10 @@ body {
 
 .main {
     padding: 20px;
+    margin: 40px 20px;
     background-color: #fff;
     border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .main__title {
@@ -72,82 +83,26 @@ body {
     margin-bottom: 40px;
 }
 
-/* Estilos para o formulário */
-.main__form {
+/* Transição de links */
+a {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-.button {
-    margin: 20px;
-    width: 180px;
+    align-items: center;
+    width: 200px;
     height: 40px;
     background-color: #D35400;
     color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-.grupo__form {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-}
-a {
     text-decoration: none;
-}
-form {
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease-in-out;
 }
 
-form div {
-    margin-bottom: 40px;
-    max-width: 500px;
+a:hover,
+a:focus {
+    background-color: #ECF0F1;
+    color: #D35400;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #2C3E50;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #BDC3C7;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #2C3E50;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 10px;
-    
-}
-
-fieldset {
-    border: 1px solid #BDC3C7;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-legend {
-    font-size: 18px;
-    font-weight: bold;
-    color: #2C3E50;
-    padding: 0 10px;
-}
-
+/* Efeitos de foco e hover em botões */
 button[type="submit"] {
     background-color: #D35400;
     color: #fff;
@@ -156,16 +111,117 @@ button[type="submit"] {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #E67E22;
+    transform: scale(1.05);
+}
+
+/* Estilos para o formulário */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.form-container div {
+    margin-bottom: 15px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus {
+    border-color: #2980B9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+    outline: none;
+}
+
+.form-container fieldset {
+    border: 1px solid #BDC3C7;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.form-container legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C3E50;
+    padding: 0 10px;
+}
+
+.form-container input[type="radio"],
+.form-container input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.form-container input[type="radio"]:hover,
+.form-container input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #D35400;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #E67E22;
+}
+
+.form-container button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+.form-grup {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* Layout para telas maiores */
 @media(min-width: 768px) {
-    .grupo__form {
-        width: 40%;
-    }
-    .main {
-        max-width: 80vw;
-    }
     .header {
         display: flex;
         align-items: center;
