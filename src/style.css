@@ -37,8 +37,8 @@ body {
     background: #95A5A6;
     border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: 0px;
+    left: 0px;
     z-index: -1;
     transition: background 0.3s ease-in-out;
 }
