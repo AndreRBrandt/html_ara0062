@@ -90,16 +90,16 @@ a {
     align-items: center;
     width: 200px;
     height: 40px;
-    background-color: #D35400;
+    background-color: #2980B9;
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 a:hover,
 a:focus {
-    background-color: #ECF0F1;
-    color: #D35400;
+    background-color: #D35400;
+    color: #ffffff;
 }
 
 /* Efeitos de foco e hover em botões */
